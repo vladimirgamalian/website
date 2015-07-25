@@ -5,8 +5,13 @@ title: Vladimir Gamalian
 <div>
 <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+      {% assign currentdate = post.date | date: "%Y" %}
+      {% if currentdate != date %}
+        <li id="y{{currentdate}}">{{ currentdate }}</li>
+        {% assign date = currentdate %} 
+      {% endif %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}	
   </ul>
 </div>
 <div>
