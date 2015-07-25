@@ -2,6 +2,10 @@ body {
   background-color: #d5dbdb;
 }
 
+ul.post-list {
+	list-style-type: none;
+}
+
 li.years {
 	font-size: 300%
 }
