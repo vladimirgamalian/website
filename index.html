@@ -11,7 +11,7 @@ title: Vladimir Gamalian
         {% assign prev_year = current_year %} 
       {% endif %}
 	  
-	  {% assign current_month = post.date | date: "%M" %}
+	  {% assign current_month = post.date | date: "%B" %}
       {% if current_month != prev_month %}
         <li class="months" id="m{{current_month}}">{{ current_month }}</li>
         {% assign prev_month = current_month %} 
