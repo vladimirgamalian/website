@@ -1,5 +1,7 @@
 body {
+  padding: 12px;
   background-color: #d5dbdb;
+  color: #333;
 }
 
 ul.post-list {
